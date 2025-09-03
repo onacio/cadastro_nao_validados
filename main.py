@@ -10,10 +10,7 @@ nomes1 = esus['Nome']
 nomes2 = sisab['Nome']
 
 # Verifica se os nomes do primeiro arquivo estão no segundo
-sisab['presente_no_segundo'] = nomes2.isin(nomes1)
-
-# Mostra os resultados
-print(sisab['Nome'])
+sisab['status'] = nomes2.isin(nomes1)
 
 # Salva os resultados se desejar
-sisab.to_csv('comparacao_resultado.csv', index=False)
+sisab.to_csv('resultado.csv', sep=';', index=False)
